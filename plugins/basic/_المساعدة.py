@@ -25,7 +25,7 @@ def get_help_buttons():
             ]
     row_2 = [
             Button.inline("• أوامر التسلية •", data="get_fun_"),
-            Button.inline("• أوامر الكروبات •", data="get_group_")
+            Button.inline("• النشر التلقائي •", data="get_group_")
             ]
     if InlinePlugin:
         row_2.append(Button.inline("• أوامر الأنلاين •", data="inlone"))
