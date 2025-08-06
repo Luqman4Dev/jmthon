@@ -10,7 +10,7 @@
 """
 
 import asyncio
-from .. import jmthon_cmd,JmdB, DEV_CHAT, LOG_CHAT, TAG_CHAT
+from .. import jmthon_cmd, JmdB, DEV_CHAT, LOG_CHAT, TAG_CHAT, LOGS
 
 
 async def send_to_chats(client, message, media, chats):
@@ -26,7 +26,7 @@ async def send_to_chats(client, message, media, chats):
             success += 1
             await asyncio.sleep(1)
         except Exception as e:
-            logger.error(f"خطأ في الدردشة {chat_id}: الخطأ {e}")
+            LOGS.error(f"خطأ في الدردشة {chat_id}: الخطأ {e}")
             failed += 1
     
     return success, failed
@@ -81,7 +81,7 @@ async def nshr(event):
     except (ValueError, IndexError):
         await event.edit("** استخدام خاطئ!**\nالاستخدام: `.نشر [الوقت] [العدد]` بالرد على الرسالة أو `.نشر [الوقت] [العدد] [النص]`")
     except Exception as e:
-        logger.error(f"خطأ في امر النشر: {e}")
+        LOGS.error(f"خطأ في امر النشر: {e}")
     finally:
         JmdB.del_key("NSHR")
 
