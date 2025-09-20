@@ -2,7 +2,7 @@ from telethon import functions
 from telethon.tl import functions
 from telethon.tl.functions.channels import InviteToChannelRequest
 
-from .. import jmubot
+from .. import jmubot, jmthon_cmd
 
 
 @jmthon_cmd(pattern="ضيف ([\s\S]*)")
