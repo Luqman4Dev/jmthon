@@ -8,9 +8,9 @@ services:
     plan: free
     name: Ohs
     env: python
-    repo: https://github.com/Ahmadow6/source
+    repo: https://github.com/Luqman4Dev/jmthon
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 server.py & python3 -m Tepthon
+    startCommand: python3 server.py & python3 -m jmthon
     region: frankfurt
     envVars:
       - key: ALIVE_NAME
@@ -26,7 +26,7 @@ services:
       - key: TG_BOT_TOKEN
         sync: false
       - key: TZ
-        value: Asia/Amman
+        value: Asia/Baghdad
       - key: PYTHON_VERSION
         value: 3.10.9
       - key: DATABASE_URL
