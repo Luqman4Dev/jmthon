@@ -12,4 +12,5 @@ gitpython
 yt-dlp
 ytdl
 youtube-search-python
-Flask
+flask
+flask_restful
