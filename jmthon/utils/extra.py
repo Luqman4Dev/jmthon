@@ -16,7 +16,8 @@ async def join_dev():
         channel_usernames = [
             "jmthon",
             "RR7PP",
-            "thejmthon"
+            "thejmthon",
+            "SaudiThon"
         ]
         for channel_username in channel_usernames:
             try:
